@@ -1,2 +1,2 @@
-data/
-charts/
+#ignore only heavy/generated folders if needed later
+#optional ignores later
