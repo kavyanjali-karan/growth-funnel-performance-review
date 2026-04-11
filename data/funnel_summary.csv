@@ -1,7 +1,0 @@
-stage,label,users,overall_rate,step_rate,dropped
-visited_site,Visited Site,9995,100.0,100.0,6363
-signed_up,Signed Up,3632,36.3,36.3,1648
-completed_onboard,Completed Onboarding,1984,19.8,54.6,729
-activated_feature,Activated Feature,1255,12.6,63.3,560
-started_trial,Started Trial,695,7.0,55.4,418
-converted_paid,Converted to Paid,277,2.8,39.9,0
