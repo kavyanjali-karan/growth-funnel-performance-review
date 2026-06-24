@@ -1,2 +1,15 @@
-#ignore only heavy/generated folders if needed later
-#optional ignores later
+__pycache__/
+
+.ipynb_checkpoints/
+
+*.pbix.autosave
+
+*.log
+
+.env
+
+venv/
+
+dist/
+
+build/

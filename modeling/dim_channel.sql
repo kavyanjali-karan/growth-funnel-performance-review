@@ -1,7 +1,0 @@
-CREATE TABLE dim_channel (
-
-    channel_key INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-
-    channel VARCHAR(100) NOT NULL
-
-);
