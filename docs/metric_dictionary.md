@@ -1,175 +1,35 @@
 # Metric Dictionary
 
-## Visitor
+Visitors
 
-Definition:
-
-A user entering the funnel.
-
-Owner:
-
-Growth Team
-
-Business Purpose:
-
-Measures acquisition volume.
+Unique sessions entering funnel.
 
 ---
 
-## Sign-Up Rate
+Signup Rate
 
-Formula:
-
-Sign-Ups / Visitors
-
-Owner:
-
-Growth Team
-
-Business Purpose:
-
-Measures landing page effectiveness.
+Signups / Visitors
 
 ---
 
-## Onboarding Completion Rate
+Activation Rate
 
-Formula:
-
-Completed Onboarding / Sign-Ups
-
-Owner:
-
-Product Team
-
-Business Purpose:
-
-Measures onboarding usability.
+Activated Users / Signups
 
 ---
 
-## Activation Rate
+Trial Conversion
 
-Formula:
-
-Activated Users / Completed Onboarding
-
-Owner:
-
-Product Team
-
-Business Purpose:
-
-Measures product adoption.
+Trials / Activated Users
 
 ---
 
-## Trial Conversion Rate
+Paid Conversion
 
-Formula:
-
-Trial Users / Activated Users
-
-Owner:
-
-Growth Team
-
-Business Purpose:
-
-Measures customer intent.
+Paid Customers / Trial Users
 
 ---
 
-## Paid Conversion Rate
+Retention
 
-Formula:
-
-Paid Users / Trial Users
-
-Owner:
-
-Revenue Team
-
-Business Purpose:
-
-Measures monetization effectiveness.
-
----
-
-## Monthly Recurring Revenue (MRR)
-
-Formula:
-
-Sum(Monthly Revenue)
-
-Owner:
-
-Finance
-
-Business Purpose:
-
-Primary SaaS revenue KPI.
-
----
-
-## Revenue Per User (RPU)
-
-Formula:
-
-Revenue / Users
-
-Owner:
-
-Finance
-
-Business Purpose:
-
-Measures monetization efficiency.
-
----
-
-## Revenue Per Paid User
-
-Formula:
-
-Revenue / Paid Users
-
-Owner:
-
-Finance
-
-Business Purpose:
-
-Measures subscription value.
-
----
-
-## Trial Participation Rate
-
-Formula:
-
-Trial Users / Total Users
-
-Owner:
-
-Product Team
-
-Business Purpose:
-
-Measures engagement with premium functionality.
-
----
-
-## Cohort Conversion Rate
-
-Formula:
-
-Paid Users in Cohort / Total Users in Cohort
-
-Owner:
-
-BI Team
-
-Business Purpose:
-
-Tracks performance across acquisition periods.
+Active Customers / Paid Customers

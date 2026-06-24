@@ -1,0 +1,19 @@
+Revenue=
+
+SUM(
+
+fact_growth_events[revenue]
+
+)
+
+-------------------------
+
+Revenue Per Customer=
+
+DIVIDE(
+
+[Revenue],
+
+DISTINCTCOUNT(dim_customer[customer_id])
+
+)

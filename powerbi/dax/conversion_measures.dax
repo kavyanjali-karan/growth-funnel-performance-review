@@ -1,0 +1,9 @@
+Trial Conversion=
+
+DIVIDE(
+
+SUM(fact_growth_events[paid_users]),
+
+SUM(fact_growth_events[trial_users])
+
+)

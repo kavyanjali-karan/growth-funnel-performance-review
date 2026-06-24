@@ -1,0 +1,9 @@
+Revenue YTD=
+
+TOTALYTD(
+
+[Revenue],
+
+dim_date[full_date]
+
+)

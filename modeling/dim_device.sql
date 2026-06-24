@@ -1,7 +1,0 @@
-CREATE TABLE dim_device (
-
-    device_key INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-
-    device VARCHAR(50) NOT NULL
-
-);
