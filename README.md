@@ -46,37 +46,29 @@ Customer Lifetime Value
 
 ## Executive Dashboards
 
-Executive Command Center
+Executive Overview
 
-Growth Funnel
+Funnel Analysis
 
-Channel Intelligence
+Channel Performance
 
-Campaign Intelligence
+Cohort Analysis
 
-Customer Journey
+Retention Metrics
 
-Operational Health
+
 
 ---
 
 ## Data Model
 
-Fact
+Channel Metrics
 
-fact_growth_events
+Cohort Metrics
 
-Dimensions
+Funnel Metrics
 
-dim_date
-
-dim_channel
-
-dim_campaign
-
-dim_device
-
-dim_customer
+Retention Cohorts
 
 ---
 
