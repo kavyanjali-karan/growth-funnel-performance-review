@@ -4,6 +4,6 @@ TOTALYTD(
 
 [Revenue],
 
-dim_date[full_date]
+dim_date[date]
 
 )

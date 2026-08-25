@@ -1,0 +1,19 @@
+device,stage,users,rate
+tablet,Visited Site,997,100.0
+tablet,Signed Up,347,34.8
+tablet,Completed Onboarding,191,19.2
+tablet,Activated Feature,119,11.9
+tablet,Started Trial,63,6.3
+tablet,Converted to Paid,27,2.7
+desktop,Visited Site,5487,100.0
+desktop,Signed Up,2342,42.7
+desktop,Completed Onboarding,1422,25.9
+desktop,Activated Feature,956,17.4
+desktop,Started Trial,571,10.4
+desktop,Converted to Paid,229,4.2
+mobile,Visited Site,3511,100.0
+mobile,Signed Up,943,26.9
+mobile,Completed Onboarding,371,10.6
+mobile,Activated Feature,180,5.1
+mobile,Started Trial,61,1.7
+mobile,Converted to Paid,21,0.6
