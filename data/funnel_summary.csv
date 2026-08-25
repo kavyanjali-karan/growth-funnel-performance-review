@@ -1,0 +1,8 @@
+stage,label,users,overall_rate,step_rate,dropped
+visited_site,Visited Site,2243206,100.0,100.0,2107595
+signed_up,Signed Up,135611,6.0,6.0,27856
+completed_onboard,Completed Onboarding,107755,4.8,79.5,25158
+completed_profile,Completed Profile,82597,3.7,76.7,15373
+activated_feature,Activated Feature,67224,3.0,81.4,7750
+started_trial,Started Trial,59474,2.7,88.5,43861
+converted_paid,Converted to Paid,15613,0.7,26.3,0

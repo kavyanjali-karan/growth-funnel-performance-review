@@ -2,7 +2,7 @@ Revenue=
 
 SUM(
 
-fact_growth_events[revenue]
+fact_growth_events[mrr]
 
 )
 
