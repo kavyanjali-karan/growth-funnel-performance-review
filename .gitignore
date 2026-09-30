@@ -1,7 +1,8 @@
 __pycache__/
-
+.pytest_cache/
 .ipynb_checkpoints/
 
+*.pbix
 *.pbix.autosave
 
 *.log
@@ -9,7 +10,18 @@ __pycache__/
 .env
 
 venv/
+.venv/
 
 dist/
-
 build/
+
+# Generated outputs
+outputs/
+
+# Data artifacts (regenerable)
+data/raw/*.csv
+data/curated/*.csv
+data/warehouse/*.csv
+
+# Local workspace metadata
+.freebuff/

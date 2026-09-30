@@ -1,19 +1,12 @@
-Revenue=
-
+Revenue =
 SUM(
-
-fact_growth_events[mrr]
-
+    funnel_metrics[mrr]
 )
 
 -------------------------
 
-Revenue Per Customer=
-
+Revenue Per Customer =
 DIVIDE(
-
-[Revenue],
-
-DISTINCTCOUNT(dim_customer[customer_id])
-
+    [Revenue],
+    SUM(funnel_metrics[paid_customers])
 )

@@ -2,7 +2,7 @@ let
 
 Source=Csv.Document(
 
-File.Contents("signups.csv")
+File.Contents("..\..\data\raw\signups.csv")
 
 )
 

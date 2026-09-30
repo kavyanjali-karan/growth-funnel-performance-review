@@ -1,9 +1,5 @@
-Retention Rate=
-
+Retention Rate =
 DIVIDE(
-
-SUM(fact_growth_events[trial_users]),
-
-SUM(fact_growth_events[signups])
-
+    SUM(funnel_metrics[activated]),
+    SUM(funnel_metrics[signups])
 )

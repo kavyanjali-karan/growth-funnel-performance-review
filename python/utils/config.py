@@ -1,5 +1,0 @@
-REFRESH_TIME="06:00 UTC"
-
-MODEL_VERSION="1.0"
-
-OWNER="Business Intelligence"

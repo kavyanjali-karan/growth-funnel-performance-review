@@ -1,9 +1,5 @@
-Trial Conversion=
-
+Trial Conversion =
 DIVIDE(
-
-SUM(fact_growth_events[paid_customers]),
-
-SUM(fact_growth_events[trial_users])
-
+    SUM(funnel_metrics[paid_customers]),
+    SUM(funnel_metrics[trial_users])
 )

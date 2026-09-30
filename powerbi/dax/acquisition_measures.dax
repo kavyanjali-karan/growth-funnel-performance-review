@@ -1,29 +1,19 @@
-Visitors=
-
+Visitors =
 SUM(
-
-fact_growth_events[visitors]
-
+    funnel_metrics[visitors]
 )
 
 -------------------------
 
-Signups=
-
+Signups =
 SUM(
-
-fact_growth_events[signups]
-
+    funnel_metrics[signups]
 )
 
 -------------------------
 
-Signup Rate=
-
+Signup Rate =
 DIVIDE(
-
-[Signups],
-
-[Visitors]
-
+    [Signups],
+    [Visitors]
 )

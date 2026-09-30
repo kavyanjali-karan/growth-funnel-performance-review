@@ -26,7 +26,6 @@ Power BI
 
 ↓
 
-Tableau
 
 ↓
 
