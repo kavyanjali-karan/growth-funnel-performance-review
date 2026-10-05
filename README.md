@@ -2,20 +2,41 @@
 
 [![CI](https://github.com/kavyanjali-karan/growth-funnel-performance-review/actions/workflows/ci.yml/badge.svg)](https://github.com/kavyanjali-karan/growth-funnel-performance-review/actions/workflows/ci.yml) [![tests: 18 passed](https://img.shields.io/badge/tests-18%20passed-2ea44f)](tests/) [![license: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-An end-to-end analytics pipeline that transforms 2.24M **simulated** visitor records into a 7-stage conversion funnel, uncovering a 0.70% visitor-to-paid conversion rate across signups, trials, and paid adoption.
+2,243,206 visitors landed in the store. 15,613 of them ever paid. That
+0.70% visitor-to-paid conversion is the number this project exists to
+explain: seven stages sit between those two figures, and before this
+analysis nobody could say which one was leaking.
 
-**Live dashboard:** [interactive dashboard](https://kavyanjali-karan.github.io/growth-funnel-performance-review/dashboard.html) — rebuilt in CI from the committed data.
+The repo turns 2.24M **simulated** visitor records into that 7-stage
+funnel, from acquisition through signup, onboarding, profile completion,
+feature activation, trial and payment. SQL and Python do the pipeline
+work; a Power BI model does the reporting. The
+[interactive dashboard](https://kavyanjali-karan.github.io/growth-funnel-performance-review/dashboard.html)
+is rebuilt in CI from the committed data, so the live page always matches
+the tables below.
 
 ## Where the funnel leaked
 
-Marketing was spending across multiple channels but had no unified view of where visitors dropped off between acquisition and payment. Signup-to-trial conversion varied wildly by channel, and the product team had no data on which onboarding steps correlated with paid conversion. The business was leaving revenue on the table without knowing which funnel stage to optimize.
+Money was going out to eight acquisition channels, but there was no
+single view of where visitors fell away between landing and paying.
+Signup-to-trial conversion swung hard from channel to channel, and the
+product team had no evidence for which onboarding steps actually
+correlated with paying. Every optimization debate started from opinion,
+because nobody knew which stage leaked most.
 
-## Pipeline overview
+## How the pipeline works
 
-1. **Data Generation** — Created a realistic dataset of 2.24M visitor records across 8 channels with granular session-level data (device, country, session duration) and daily-channel aggregations
-2. **7-Stage Funnel Pipeline** — SQL and Python pipeline that tracks visitors through: Acquisition → Signup → Onboarding → Profile Completion → Feature Activation → Trial → Paid Conversion
-3. **Star-Schema Power BI Dashboard** — DAX measures tracking signup (6.05%), trial (43.86%), and paid conversion (26.25%) stages with channel and device breakdowns
-4. **Metric Governance** — Documented metric definitions, SOPs, and optimization recommendations for each funnel stage
+1. **Build the data** — 2.24M visitor records across 8 channels, with
+   session-level detail (device, country, session duration) plus
+   daily-channel aggregations
+2. **Track every stage** — SQL and Python move each visitor from
+   Acquisition → Signup → Onboarding → Profile Completion → Feature
+   Activation → Trial → Paid Conversion
+3. **Model it in Power BI** — a star schema with DAX measures for the
+   three conversion stages (signup 6.05%, trial 43.86%, paid 26.25%),
+   broken down by channel and device
+4. **Write the definitions down** — metric definitions, SOPs and
+   optimization recommendations for each funnel stage
 
 ## Key Findings
 
@@ -35,7 +56,7 @@ The dataset simulates an e-commerce platform with multi-channel visitor acquisit
 | Dataset | Records | Description |
 |---------|---------|-------------|
 | `visitors.csv` | 5,848 | Daily × channel aggregations (sum = 2,243,206 visitors) |
-| `visitors_granular.csv` | 2,243,206 | Individual visitor records with device, country, session duration |
+| `visitors_granular.csv` | 2,243,206 | Individual visitor records with device, country, session duration — ~97 MB, kept out of git and rebuilt with `data/generate_granular_visitors.py` (seeded, byte-identical) |
 | `signups.csv` | 5,848 | Daily signups by channel |
 | `trials.csv` | 5,848 | Daily trial initiations by channel |
 | `paid_customers.csv` | 5,848 | Daily paid conversions by channel |
@@ -44,7 +65,7 @@ The dataset simulates an e-commerce platform with multi-channel visitor acquisit
 | `activated_feature.csv` | 5,848 | Daily feature activations |
 | `marketing_spend.csv` | 5,848 | Daily marketing spend by channel |
 
-Regenerate with:
+Rebuilding the data:
 ```bash
 pip install pandas numpy
 python data/generate_data.py           # aggregated CSVs
@@ -53,9 +74,10 @@ python data/generate_granular_visitors.py  # 2.24M-row granular file
 
 ## Dashboards
 
-Scripts in this repo render every image below from the pipeline output — nothing is hand-drawn. The stills come from
-[`python/generate_dashboard_pngs.py`](python/generate_dashboard_pngs.py) and the interactive page from
-[`python/generate_dashboards.py`](python/generate_dashboards.py), using the same Power BI design system.
+No chart below was made in a design tool. Two scripts render straight
+from the pipeline output: [`python/generate_dashboard_pngs.py`](python/generate_dashboard_pngs.py)
+for the images and [`python/generate_dashboards.py`](python/generate_dashboards.py)
+for the interactive page, sharing one Power BI-style visual language.
 
 ### Funnel Analysis
 ![Funnel Analysis](assets/funnel_analysis.png)
@@ -72,7 +94,7 @@ Scripts in this repo render every image below from the pipeline output — nothi
 ### Executive Overview
 ![Executive Overview](assets/executive_overview.png)
 
-### Regenerating the dashboards
+### Rebuilding the dashboards
 
 ```bash
 python data/generate_data.py              # datasets (seeded, reproducible)
@@ -80,8 +102,8 @@ python python/generate_dashboard_pngs.py  # renders assets/*.png
 python python/generate_dashboards.py      # builds assets/dashboard.html (Chart.js inlined, no CDN)
 ```
 
-Every push rebuilds both dashboards from the committed data before Pages publishes, so the
-live dashboard and the images in this README always agree.
+A push triggers a rebuild of both from the committed data before Pages
+publishes, so a stale screenshot isn't something this repo can produce.
 
 ## Project Structure
 
